@@ -204,11 +204,6 @@ abstract class PxSeleniumTestCase extends PHPUnit_Extensions_SeleniumTestCase {
 
     $this->click('id=edit-submit');
     $this->waitForPageToLoad('30000', SELENIUM_EXPECT_ERROR);
-
-    // Test that we are redirected to the front page.
-    foreach ($this->defaultFrontPageBlockTitles as $block_title) {
-      $this->verifyTextPresent($block_title);
-    }
   }
 
   /**
