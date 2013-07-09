@@ -21,4 +21,11 @@
 $local_settings_filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'local.selenium_settings.php';
 if (file_exists($local_settings_filename)) {
   require_once $local_settings_filename;
+  exit();
+}
+
+// Search a directory up.
+$local_settings_filename = "../$local_settings_filename";
+if (file_exists($local_settings_filename)) {
+  require_once $local_settings_filename;
 }
