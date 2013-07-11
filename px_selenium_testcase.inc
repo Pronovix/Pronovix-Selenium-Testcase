@@ -291,4 +291,15 @@ abstract class PxSeleniumTestCase extends PHPUnit_Extensions_SeleniumTestCase {
     $this->type($selector, $full_filepath);
     $this->pause(1000);
   }
+
+  /**
+   * Tests that the admin page is not accessible for anonymous users.
+   */
+  public function testAdminPageIsInaccessibleForAnonymous() {
+    $this->open('user/logout');
+    $this->waitForPageToLoad('30000', SELENIUM_EXPECT_ERROR);
+
+    $this->open('admin');
+    $this->verifyTextPresent('Access denied');
+  }
 }
