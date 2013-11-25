@@ -194,6 +194,7 @@ abstract class PxSeleniumTestCase extends PHPUnit_Extensions_SeleniumTestCase {
    */
   protected function login($username, $password) {
     $this->open('user/logout');
+    $this->waitForPageToLoad('30000', SELENIUM_EXPECT_ERROR);
     $this->open('user/login');
 
     $this->focus('id=edit-name');
