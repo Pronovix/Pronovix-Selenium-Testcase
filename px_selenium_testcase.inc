@@ -86,7 +86,7 @@ class LocalSeleniumSettings {
   }
 }
 
-abstract class PxSeleniumTestCase extends PHPUnit_Extensions_Selenium2TestCase {
+abstract class PxSeleniumTestCase extends MigrationToSelenium2 {
   protected $settings;
 
   protected function setUp() {
