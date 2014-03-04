@@ -1,0 +1,3 @@
+[submodule "phpunit-migration-to-selenium2"]
+	path = phpunit-migration-to-selenium2
+	url = git@github.com:rnixik/phpunit-migration-to-selenium2.git
