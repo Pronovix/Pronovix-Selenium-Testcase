@@ -7,6 +7,7 @@
  */
 
 require_once 'vendor/autoload.php';
+require_once 'phpunit-migration-to-selenium2/MigrationToSelenium2.php';
 
 /**
  * Expect error message on page load.
